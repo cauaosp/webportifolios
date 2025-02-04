@@ -1,6 +1,5 @@
-import { Profile } from "../components/homepage";
-import { PortifolioDownload } from "../components/homepage/portifolio-download";
-import { Footer, TopMenu } from "../components/shared";
+import { Footer, Profile, TopMenu } from "../components/shared";
+import { PortifolioDownload } from "../components/shared/index";
 
 export default function About() {
   return (

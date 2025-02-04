@@ -1,6 +1,10 @@
 import { ContactForms } from "../components/contact/forms";
-import { PortifolioDownload, Profile } from "../components/homepage";
-import { Footer, TopMenu } from "../components/shared";
+import {
+  Footer,
+  PortifolioDownload,
+  Profile,
+  TopMenu,
+} from "../components/shared";
 
 export default function Contact() {
   return (

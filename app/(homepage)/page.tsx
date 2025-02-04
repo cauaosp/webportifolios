@@ -1,11 +1,10 @@
+import { AgeCounter, CarouselHomepage } from "../components/homepage";
+import { Footer } from "../components/shared/footer";
 import {
-  AgeCounter,
-  CarouselHomepage,
   PortifolioDownload,
   Profile,
-} from "../components/homepage";
-import { Footer } from "../components/shared/footer";
-import { TopMenu } from "../components/shared/index";
+  TopMenu,
+} from "../components/shared/index";
 
 export default function HomePage() {
   return (
