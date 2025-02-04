@@ -1,0 +1,15 @@
+export { Accordion } from "./accordion";
+export { Brazil } from "./brazil";
+export { Cat } from "./cat";
+export { Duck } from "./duck";
+export { EducationCap } from "./education-cap";
+export { FileDownload } from "./file-download";
+export { GitBranch } from "./git-branch";
+export { Github } from "./github";
+export { Home } from "./home";
+export { LinkedIn } from "./linkedin";
+export { Sailboat } from "./sailboat";
+export { Send } from "./send";
+export { SouthAmerica } from "./south-america";
+export { Tags } from "./tags";
+export { UserAvatar } from "./user-avatar";
