@@ -9,7 +9,7 @@ export const Profile = ({...props}) => {
   return (
     <div className={cn("row-span-3 grid grid-rows-3 gap-1 py-3 w-64 h-96 2xl:h-[32rem]", props.className)}>
       <Image
-        src="/image/smile-profile.jpg"
+        src="/image/foto-github.JPG"
         alt="perfil"
         width={300}
         height={300}
