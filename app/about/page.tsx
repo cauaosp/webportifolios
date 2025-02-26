@@ -3,7 +3,7 @@ import { PortifolioDownload } from "../components/shared/index";
 
 export default function About() {
   return (
-    <div className="grid gap-2 md:gap-6 h-screen bg-gray-950 p-5 pb-1 px-36 select-none">
+    <>
       <TopMenu />
       <PortifolioDownload />
 
@@ -65,6 +65,6 @@ export default function About() {
         </div>
       </div>
       <Footer />
-    </div>
+    </>
   );
 }

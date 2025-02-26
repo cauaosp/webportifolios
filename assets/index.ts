@@ -8,6 +8,7 @@ export { GitBranch } from "./git-branch";
 export { Github } from "./github";
 export { Home } from "./home";
 export { LinkedIn } from "./linkedin";
+export { Menu } from "./menu";
 export { Sailboat } from "./sailboat";
 export { Send } from "./send";
 export { SouthAmerica } from "./south-america";

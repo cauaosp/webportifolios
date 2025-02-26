@@ -1,25 +1,88 @@
 "use client";
 
-import { Home, Send, UserAvatar } from "@/assets";
-import { usePathname, useRouter } from 'next/navigation';
+import { Home, Menu, Send, UserAvatar } from "@/assets";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export const TopMenu = () => {
   const [activeLink, setActiveLink] = useState("");
+  const [isMobile, setIsMobile] = useState(false);
+  const [isClient, setIsClient] = useState(false);
   const router = useRouter();
   const pathname = usePathname();
 
   useEffect(() => {
-    if (pathname === '/') {
-      setActiveLink('home');
-    } else if (pathname === '/about') {
-      setActiveLink('about');
-    } else if (pathname === '/contact') {
-      setActiveLink('contact');
+    if (pathname === "/") {
+      setActiveLink("home");
+    } else if (pathname === "/about") {
+      setActiveLink("about");
+    } else if (pathname === "/contact") {
+      setActiveLink("contact");
     }
   }, [pathname]);
 
-  return (
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 768);
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  if (!isClient) {
+    return null;
+  }
+
+  return isMobile ? (
+    <DropdownMenu>
+      <DropdownMenuTrigger className="m-5 size-fit">
+        <Menu width={25} height={25} color={"#fff"} />
+      </DropdownMenuTrigger>
+      <DropdownMenuContent className="text-white bg-white/10 ml-5">
+        <DropdownMenuItem
+          onClick={() => router.push("/")}
+          className="border-b rounded-none border-white/25"
+        >
+          <div>Início</div>
+          <Home color={"#fff"} width={25} height={25} />
+        </DropdownMenuItem>
+
+        <DropdownMenuItem
+          onClick={() => router.push("/contact")}
+          className="border-b rounded-none border-white/25"
+        >
+          <div>Contato</div>
+          <Send fill={"#ffffff33"} width={25} height={25} stroke={"#fff"} />
+        </DropdownMenuItem>
+
+        <DropdownMenuItem onClick={() => router.push("/about")}>
+          <div>Sobre</div>
+          <UserAvatar
+            fill={"#ffffff"}
+            width={20}
+            height={20}
+            className={"-mt-0.5 "}
+          />
+        </DropdownMenuItem>
+      </DropdownMenuContent>
+    </DropdownMenu>
+  ) : (
     <div className="flex gap-6 justify-center items-center h-fit w-96 mx-auto border border-white bg-gray-700/10 rounded-3xl py-1 text-white select-none font-light tracking-tighter">
       <div
         className={`hover:border-white/25 hover:bg-white/5 border-transparent py-1 px-3 hover:border  hover:cursor-pointer tracking-tighter border rounded-2xl ${

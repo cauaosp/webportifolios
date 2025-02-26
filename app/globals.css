@@ -1,4 +1,6 @@
 @import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
 @tailwind utilities;
 
 @theme {
@@ -86,6 +88,7 @@ body {
 @layer base {
   * {
     border: border;
+    outline: rgba(var(--ring), 0.5);
   }
   body {
     @apply bg-background text-foreground;
@@ -94,6 +97,6 @@ body {
 
 @plugin 'tailwind-scrollbar' {
   nocompatible: true;
-  preferredStrategy: 'pseudoelements';
-  
+  preferredstrategy: "pseudoelements";
 }
+
