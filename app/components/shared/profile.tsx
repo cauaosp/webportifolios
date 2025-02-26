@@ -5,15 +5,20 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 
-export const Profile = ({...props}) => {
+export const Profile = ({ ...props }) => {
   return (
-    <div className={cn("row-span-3 grid grid-rows-3 gap-1 py-3 w-64 h-96 2xl:h-[32rem]", props.className)}>
+    <div
+      className={cn(
+        "row-span-3 grid grid-rows-3 gap-1 py-3 h-96 2xl:h-[32rem]",
+        props.className
+      )}
+    >
       <Image
         src="/image/foto-github.JPG"
         alt="perfil"
         width={300}
         height={300}
-        className="left-0 p-0.5 rounded-full 2xl:size-40 md:size-28 justify-self-center"
+        className="left-0 p-0.5 rounded-full 2xl:size-40 md:size-28 justify-self-center max-md:size-30"
         quality={75}
       />
 
@@ -22,7 +27,7 @@ export const Profile = ({...props}) => {
           width={25}
           height={25}
           color={"var(--color-background)"}
-          className=" drop-shadow-neon-south-america w-fit"
+          className=" drop-shadow-neon-south-america w-fit max-md:size-10"
         />
         <div>América do sul / Brasil</div>
       </div>
