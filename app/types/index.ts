@@ -1,1 +1,2 @@
-export * from "./homepage-carousel";
+export * from "./homepage";
+export * from "./shared";

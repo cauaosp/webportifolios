@@ -28,21 +28,19 @@ export const TopMenu = () => {
   }, [pathname]);
 
   useEffect(() => {
-    setIsMobile(window.innerWidth < 768);
-  }, []);
+    setIsClient(true);
 
-  useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
     };
+
+    handleResize();
+
     window.addEventListener("resize", handleResize);
+
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
-
-  useEffect(() => {
-    setIsClient(true);
   }, []);
 
   if (!isClient) {
@@ -57,7 +55,7 @@ export const TopMenu = () => {
       <DropdownMenuContent className="text-white bg-white/10 ml-5">
         <DropdownMenuItem
           onClick={() => router.push("/")}
-          className="border-b rounded-none border-white/25"
+          className="border-b rounded-none border-white/25 hover:cursor-pointer hover:font-bold"
         >
           <div>Início</div>
           <Home color={"#fff"} width={25} height={25} />
@@ -65,13 +63,16 @@ export const TopMenu = () => {
 
         <DropdownMenuItem
           onClick={() => router.push("/contact")}
-          className="border-b rounded-none border-white/25"
+          className="border-b rounded-none border-white/25 hover:cursor-pointer hover:font-bold"
         >
           <div>Contato</div>
           <Send fill={"#ffffff33"} width={25} height={25} stroke={"#fff"} />
         </DropdownMenuItem>
 
-        <DropdownMenuItem onClick={() => router.push("/about")}>
+        <DropdownMenuItem
+          onClick={() => router.push("/about")}
+          className="hover:cursor-pointer hover:font-bold"
+        >
           <div>Sobre</div>
           <UserAvatar
             fill={"#ffffff"}

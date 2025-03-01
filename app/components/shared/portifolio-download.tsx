@@ -36,7 +36,7 @@ export const PortifolioDownload = () => {
   return (
     <Button
       onClick={handleClick}
-      className="bg-white/10 border border-white/25 text-white rounded-2xl absolute top-5 right-6 p-4 hover:cursor-pointer"
+      className="bg-white/10 border border-white/25 text-white rounded-2xl absolute top-5 right-6 p-4 hover:cursor-pointer inset-shadow-xs inset-shadow-black/25"
     >
       <FileDownload width={25} height={25} color={"#fff"} />
       <div>portifólio</div>
