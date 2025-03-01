@@ -1,22 +1,46 @@
-"use client";
-
-import { HomepageSlidesEntity } from "@/app/types";
+import { CarouselHomepageProps, HomepageSlidesEntity } from "@/app/types";
 import { EducationCap, GitBranch, Tags } from "@/assets";
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardTitle,
 } from "@/components/ui/card";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
+import { cn } from "@/lib/utils"; // Ensure you have a utility function for conditional class merging
+import useEmblaCarousel from "embla-carousel-react";
+import { ArrowLeftCircleIcon, ArrowRightCircleIcon } from "lucide-react";
+import { useCallback, useEffect, useState } from "react";
 
-export function CarouselHomepage() {
+export const CarouselHomepage: React.FC<CarouselHomepageProps> = () => {
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+  const [canScrollPrev, setCanScrollPrev] = useState(false);
+  const [canScrollNext, setCanScrollNext] = useState(false);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+
+    const onSelect = () => {
+      setCanScrollPrev(emblaApi.canScrollPrev());
+      setCanScrollNext(emblaApi.canScrollNext());
+    };
+
+    emblaApi.on("select", onSelect);
+    onSelect();
+
+    return () => {
+      emblaApi.off("select", onSelect);
+    };
+  }, [emblaApi]);
+
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev();
+  }, [emblaApi]);
+
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext();
+  }, [emblaApi]);
+
   const slides: HomepageSlidesEntity[] = [
     {
       title: "Conhecimentos",
@@ -68,39 +92,52 @@ export function CarouselHomepage() {
   ];
 
   return (
-    <Carousel
-      opts={{
-        align: "start",
-        loop: true,
-      }}
-      className="md:w-[40vw] md:h-60 2xl:w-[45vw] 2xl:h-56 col-span-2 ml-14 md:-mt-12 2xl:mt-15"
+    <div
+      className={cn("col-span-2 h-[55vh] overflow-x-hidden mt-5")}
     >
-      <CarouselContent className="px-1">
-        {slides.map((slide, index) => (
-          <CarouselItem key={index}>
-            <Card className="h-56 2xl:h-64 w-full border-white/25 bg-white/5 text-white p-2 justify-between flex overflow-auto text-xs 2xl:text-sm">
-              <CardContent className="flex gap-y-3 flex-col max-h-64 w-full">
-                <CardTitle className="text-xl mb-1.5 2xl:text-2xl">
-                  {slide.title}
-                </CardTitle>
-                <CardDescription className="2xl:text-base">
-                  {slide.description}
-                </CardDescription>
-                <ul className="grid grid-cols-2 mt-1.5">
-                  {slide.list.map((item, i) => (
-                    <li key={i} className="flex py-0.5 gap-x-2 items-center">
-                      {slide.dot}
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
-          </CarouselItem>
-        ))}
-      </CarouselContent>
-      <CarouselPrevious className="-mb-10 cursor-pointer" />
-      <CarouselNext className="cursor-pointer" />
-    </Carousel>
+      <div className="px-1" ref={emblaRef}>
+        <div className="flex gap-2">
+          {slides.map((slide, index) => (
+            <div key={index} className="flex-shrink-0 w-full overflow-auto">
+              <Card className="h-56 2xl:h-64 w-full border-white/25 bg-white/5 text-white p-2 justify-between flex overflow-auto text-xs 2xl:text-sm">
+                <CardContent className="flex gap-y-3 flex-col max-h-64 w-full">
+                  <CardTitle className="text-xl mb-1.5 2xl:text-2xl">
+                    {slide.title}
+                  </CardTitle>
+                  <CardDescription className="2xl:text-base">
+                    {slide.description}
+                  </CardDescription>
+                  <ul className="grid grid-cols-2 mt-1.5">
+                    {slide.list.map((item, i) => (
+                      <li key={i} className="flex py-0.5 gap-x-2 items-center">
+                        {slide.dot}
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="flex justify-center gap-4 mt-4">
+        <Button
+          onClick={scrollPrev}
+          className="cursor-pointer hover:bg-emerald-400 text-white"
+          disabled={!canScrollPrev}
+        >
+          <ArrowLeftCircleIcon />
+        </Button>
+        <Button
+          onClick={scrollNext}
+          className="cursor-pointer hover:bg-emerald-400 text-white"
+          disabled={!canScrollNext}
+        >
+          <ArrowRightCircleIcon />
+        </Button>
+      </div>
+    </div>
   );
-}
+};

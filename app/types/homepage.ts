@@ -6,3 +6,7 @@ export type HomepageSlidesEntity = {
   list: string[],
   dot: string | ReactNode
 }
+
+export type CarouselHomepageProps = {
+  isMobile?: boolean
+}

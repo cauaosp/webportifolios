@@ -11,7 +11,7 @@ export const Profile: FC<ProfileProps> = ({ isMobile, className }) => {
   return isMobile ? (
     <div
       className={cn(
-        "flex w-screen -ml-2 -mt-2 justify-around items-center py-2 bg-gray-900",
+        "flex w-screen-mt-2 justify-around items-center py-2 bg-gray-900",
         className
       )}
     >
