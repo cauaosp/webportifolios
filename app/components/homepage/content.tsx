@@ -41,9 +41,9 @@ export const HomepageContent = ({ ...props }) => {
       <div className="text-white text-justify px-2 mt-5">
         Olá, sou
         <span className="text-emerald-400"> Cauã OSP</span>, desenvolvedor
-        nascido e criado em Fortaleza, CE, tenho <AgeCounter />
+        nascido e criado em Fortaleza - CE, tenho <AgeCounter />
         ... Atualmente, meu foco é o desenvolvimento Full Stack, busco dominar
-        ferramentas e tecnologias para criar soluções completas — desde o banco
+        ferramentas e tecnologias para criar soluções completas, desde o banco
         de dados até aplicações interativas no front-end.
       </div>
       <CarouselHomepage isMobile={isMobile} />
@@ -55,9 +55,9 @@ export const HomepageContent = ({ ...props }) => {
         <div className=" text-white text-justify 2xl:text-lg">
           Olá, sou
           <span className="text-emerald-400"> Cauã OSP</span>, desenvolvedor
-          nascido e criado em Fortaleza, CE, tenho <AgeCounter />
+          nascido e criado em Fortaleza - CE, tenho <AgeCounter />
           ... Atualmente, meu foco é o desenvolvimento Full Stack, busco dominar
-          ferramentas e tecnologias para criar soluções completas — desde o
+          ferramentas e tecnologias para criar soluções completas, desde o
           banco de dados até aplicações interativas no front-end.
         </div>
         <CarouselHomepage />
