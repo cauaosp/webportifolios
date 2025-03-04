@@ -52,30 +52,36 @@ export const TopMenu = () => {
       <DropdownMenuTrigger className="m-5 size-fit">
         <Menu width={25} height={25} color={"#fff"} />
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="text-white bg-white/10 ml-5">
+      <DropdownMenuContent className="text-emerald-400 rounded-sm bg-emerald-900/75 ml-5">
         <DropdownMenuItem
           onClick={() => router.push("/")}
-          className="border-b rounded-none border-white/25 hover:cursor-pointer hover:font-bold"
+          className={`border-b rounded-none border-white/25 hover:cursor-pointer hover:font-black active:font-bold ${
+            activeLink == "home" && "font-bold"
+          }`}
         >
           <div>Início</div>
-          <Home color={"#fff"} width={25} height={25} />
+          <Home color={"#a4f4cf"} stroke={"#a4f4cf"} width={25} height={25} />
         </DropdownMenuItem>
 
         <DropdownMenuItem
           onClick={() => router.push("/contact")}
-          className="border-b rounded-none border-white/25 hover:cursor-pointer hover:font-bold"
+          className={`border-b rounded-none border-white/25 hover:cursor-pointer hover:font-black active:font-bold ${
+            activeLink == "contact" && "font-bold"
+          }`}
         >
           <div>Contato</div>
-          <Send fill={"#ffffff33"} width={25} height={25} stroke={"#fff"} />
+          <Send fill={"#a4f4cf35"} width={25} height={25} stroke={"#a4f4cf"} />
         </DropdownMenuItem>
 
         <DropdownMenuItem
           onClick={() => router.push("/about")}
-          className="hover:cursor-pointer hover:font-bold"
+          className={`hover:cursor-pointer hover:font-black active:font-bold ${
+            activeLink == "about" && "font-bold"
+          }`}
         >
           <div>Sobre</div>
           <UserAvatar
-            fill={"#ffffff"}
+            fill={"#a4f4cf"}
             width={20}
             height={20}
             className={"-mt-0.5 "}
