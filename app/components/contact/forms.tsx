@@ -67,7 +67,7 @@ export const ContactForms = ({ ...props }) => {
         />
       </div>
       <input
-        className="border border-white/25 w-fit h-fit py-1 px-2 rounded-lg bg-white/10 cursor-pointer hover:bg-white/20 font-bold"
+        className="border border-white/25 w-fit h-fit py-1 px-2 rounded-lg bg-white/10 cursor-pointer hover:bg-white/20 font-bold mt-1"
         type="submit"
         value="Enviar"
       />
