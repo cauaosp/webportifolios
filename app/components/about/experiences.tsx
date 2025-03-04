@@ -41,9 +41,11 @@ export const Experiences = ({ ...props }) => {
               <div>09/2023 - 01/2025</div>
             </div>
             <div className="text-md tracking-tight text-justify text-neutral-300">
-              Criação de aplicativo web com integrações a APIs REST, garantindo
-              a aderência a contratos e regras de negócios bancárias. Focado em
-              entregas rápidas e eficientes
+              Criação de aplicativo web com integrações a APIs REST, e
+              desenvolvimento de APIs e serviços com aderência a contratos e
+              regras de negócios do sistema financeiro. Experiência com
+              conceitos de Clean Architecture, TDD, Design Patterns,
+              Microservices, SOLID e Clean Code.
             </div>
           </div>
           <div
