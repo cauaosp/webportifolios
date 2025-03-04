@@ -51,7 +51,7 @@ export const TopMenu = () => {
   return isMobile ? (
     isClient ? (
       <DropdownMenu>
-        <DropdownMenuTrigger className="m-5 size-fit">
+        <DropdownMenuTrigger className="m-5 size-fit hover:cursor-pointer">
           <Menu width={25} height={25} color={"#fff"} />
         </DropdownMenuTrigger>
         <DropdownMenuContent className="text-emerald-400 rounded-sm bg-emerald-900/75 ml-5">
