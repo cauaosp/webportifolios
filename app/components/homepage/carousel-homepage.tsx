@@ -7,7 +7,7 @@ import {
   CardDescription,
   CardTitle,
 } from "@/components/ui/card";
-import { cn } from "@/lib/utils"; // Ensure you have a utility function for conditional class merging
+import { cn } from "@/lib/utils";
 import useEmblaCarousel from "embla-carousel-react";
 import { ArrowLeftCircleIcon, ArrowRightCircleIcon } from "lucide-react";
 import { useCallback, useEffect, useState } from "react";
@@ -92,15 +92,13 @@ export const CarouselHomepage: React.FC<CarouselHomepageProps> = () => {
   ];
 
   return (
-    <div
-      className={cn("col-span-2 h-[55vh] overflow-x-hidden mt-5")}
-    >
+    <div className={cn("col-span-2 min-md:overflow-x-hidden mt-5")}>
       <div className="px-1" ref={emblaRef}>
         <div className="flex gap-2">
           {slides.map((slide, index) => (
-            <div key={index} className="flex-shrink-0 w-full overflow-auto">
-              <Card className="h-56 2xl:h-64 w-full border-white/25 bg-white/5 text-white p-2 justify-between flex overflow-auto text-xs 2xl:text-sm">
-                <CardContent className="flex gap-y-3 flex-col max-h-64 w-full">
+            <div key={index} className="flex-shrink-0 w-full px-2">
+              <Card className="2xl:h-64 w-full border-white/25 bg-white/5 text-white p-2 justify-between flex text-xs 2xl:text-sm">
+                <CardContent className="flex gap-y-3 flex-col w-full">
                   <CardTitle className="text-xl mb-1.5 2xl:text-2xl">
                     {slide.title}
                   </CardTitle>
@@ -122,7 +120,7 @@ export const CarouselHomepage: React.FC<CarouselHomepageProps> = () => {
         </div>
       </div>
 
-      <div className="flex justify-center gap-4 mt-4">
+      <div className="flex justify-center gap-4 md:mt-4">
         <Button
           onClick={scrollPrev}
           className="cursor-pointer hover:bg-emerald-400 text-white"
