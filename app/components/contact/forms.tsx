@@ -3,7 +3,7 @@
 import emailjs from "@emailjs/browser";
 import { useRef } from "react";
 
-export const ContactForms = () => {
+export const ContactForms = ({ ...props }) => {
   const form = useRef<HTMLFormElement>(null);
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
@@ -30,7 +30,9 @@ export const ContactForms = () => {
     <form
       ref={form}
       onSubmit={sendEmail}
-      className="col-span-2 text-white text-justify 2xl:text-lg grid grid-cols-2 grid-rows-5 gap-x-5 md:h-96 2xl:h-[30rem]"
+      className={`text-white text-justify grid grid-cols-2 grid-rows-4 gap-x-5 px-2 2xl:h-[30rem] 2xl:text-lg max-md:gap-y-1 scrollbar-thin scrollbar-track-rounded-full scrollbar-thumb-rounded-full scrollbar-thumb-emerald-400 scrollbar-track-gray-900 ${
+        props.isMobile ? "mt-5" : "col-span-2"
+      }`}
     >
       <div className="w-full flex flex-col gap-2">
         <label htmlFor="" className="font-bold">
@@ -54,18 +56,18 @@ export const ContactForms = () => {
           placeholder="cauaosp20@gmail.com"
         />
       </div>
-      <div className="col-span-2 row-span-3 mt-1 flex flex-col gap-2">
+      <div className="col-span-2 row-span-2 mt-1 flex flex-col gap-2 h-fit">
         <label htmlFor="" className="font-bold">
           Mensagem
         </label>
         <textarea
-          className=" border border-white w-full md:min-h-36 md:max-h-64 2xl:min-h-48 max-h-72 bg-white rounded-lg text-gray-950 scrollbar-thin scrollbar-track-rounded-full scrollbar-thumb-rounded-full scrollbar-thumb-emerald-400 scrollbar-track-white select-text p-1"
+          className=" border border-white w-full md:min-h-36 md:max-h-64 2xl:min-h-48 max-h-72 bg-white rounded-lg text-gray-950 scrollbar-thin scrollbar-track-rounded-full scrollbar-thumb-rounded-full scrollbar-thumb-emerald-400 scrollbar-track-white select-text p-1 max-md:max-h-48"
           name="message"
           placeholder="Digite sua mensagem"
         />
       </div>
       <input
-        className=" border border-white/25 w-fit h-fit  py-1 px-2 rounded-lg bg-white/10 cursor-pointer hover:bg-white/20 font-bold"
+        className="border border-white/25 w-fit h-fit py-1 px-2 rounded-lg bg-white/10 cursor-pointer hover:bg-white/20 font-bold"
         type="submit"
         value="Enviar"
       />
