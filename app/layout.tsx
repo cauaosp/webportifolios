@@ -1,4 +1,4 @@
-import { Footer, PortifolioDownload, TopMenu } from "./components/shared";
+import { CurriculoDownload, Footer, TopMenu } from "./components/shared";
 import "./globals.css";
 
 export default function RootLayout({
@@ -16,7 +16,7 @@ export default function RootLayout({
       <body>
         <div className="grid gap-2 h-screen bg-gray-950 pt-2 md:px-10 select-none">
           <TopMenu />
-          <PortifolioDownload />
+          <CurriculoDownload />
           {children}
           <Footer />
         </div>

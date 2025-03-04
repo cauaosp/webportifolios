@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 import { useState } from "react";
 
-export const PortifolioDownload = () => {
+export const CurriculoDownload = () => {
   const [downloadStatus, setDownloadStatus] = useState("");
   const [showStatus, setShowStatus] = useState(false);
 
@@ -39,7 +39,7 @@ export const PortifolioDownload = () => {
       className="bg-white/10 border border-white/25 text-white rounded-2xl absolute top-5 right-6 p-4 hover:cursor-pointer inset-shadow-xs inset-shadow-black/25"
     >
       <FileDownload width={25} height={25} color={"#fff"} />
-      <div>portifólio</div>
+      <div>currículo</div>
       {showStatus && (
         <div
           className={`absolute -bottom-5 text-xs font-mono font-bold ${
