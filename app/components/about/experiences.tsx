@@ -2,7 +2,9 @@ export const Experiences = ({ ...props }) => {
   return (
     <div
       className={`text-white ${
-        props.isMobile ? "mt-5" : "overflow-y-scroll col-span-2 row-span-3 h-full max-h-[500px]"
+        props.isMobile
+          ? "mt-5"
+          : "overflow-y-auto col-span-2 row-span-3 h-full max-h-[500px] scrollbar-thin scrollbar-track-rounded-full scrollbar-thumb-rounded-full scrollbar-thumb-emerald-400 scrollbar-track-gray-900"
       }`}
     >
       <div className="flex flex-col gap-6 mb-15">
@@ -29,7 +31,9 @@ export const Experiences = ({ ...props }) => {
         <div className="font-bold text-3xl">Experiências profissionais</div>
         <div className="flex flex-col gap-3">
           <div
-            className={`flex flex-col gap-1 ${props.isMobile ? "mr-5" : "mr-10"}`}
+            className={`flex flex-col gap-1 ${
+              props.isMobile ? "mr-5" : "mr-10"
+            }`}
           >
             <div className="font-bold text-xl">Fitbank</div>
             <div className="flex justify-between text-emerald-400 text-xs">
@@ -43,7 +47,9 @@ export const Experiences = ({ ...props }) => {
             </div>
           </div>
           <div
-            className={`flex flex-col gap-1 ${props.isMobile ? "mr-5" : "mr-10"}`}
+            className={`flex flex-col gap-1 ${
+              props.isMobile ? "mr-5" : "mr-10"
+            }`}
           >
             <div className="font-bold text-xl">Include Jr</div>
             <div className="flex justify-between text-emerald-400 text-xs">
@@ -62,7 +68,9 @@ export const Experiences = ({ ...props }) => {
           </div>
         </div>
         <div className="font-bold text-3xl">Formação Acadêmica</div>
-        <div className={`flex flex-col gap-1 ${props.isMobile ? "mr-5" : "mr-10"}`}>
+        <div
+          className={`flex flex-col gap-1 ${props.isMobile ? "mr-5" : "mr-10"}`}
+        >
           <div className="font-bold text-xl">Universidade de Fortaleza</div>
           <div className="text-md tracking-tight text-justify text text-neutral-300">
             Graduando em Análise e Desenvolvimento de Sistemas

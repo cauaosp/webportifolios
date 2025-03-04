@@ -1,5 +1,6 @@
 "use client";
 
+import { Skeleton } from "@/components/ui/skeleton";
 import { useEffect, useState } from "react";
 
 export const AgeCounter = () => {
@@ -11,6 +12,7 @@ export const AgeCounter = () => {
     hours: 0,
     seconds: 0,
   });
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     const birthDate = new Date("2003-05-02T18:45:00");
@@ -44,7 +46,14 @@ export const AgeCounter = () => {
     return () => clearInterval(interval);
   }, [age]);
 
-  return (
+  useEffect(() => {
+    if (age.years == 0) setIsLoading(true);
+    else setIsLoading(false);
+  }, [age]);
+
+  return isLoading ? (
+    <Skeleton className="w-96 h-[20px] rounded-sm bg-emerald-400/50 inline-block" />
+  ) : (
     <span className="text-emerald-400 font-mono">
       {age.years} anos, {age.months} meses, {age.days} dias, {age.hours} horas,{" "}
       {age.minutes} minutos e {age.seconds} segundos
