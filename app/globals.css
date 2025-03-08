@@ -23,10 +23,20 @@
   --drop-shadow-neon-emerald: 0 0 3px #34d399;
 }
 
+@font-face {
+  font-family: "SourceCodePro";
+  src: url("../public/fonts/Rubik/Rubik-VariableFont_wght.ttf")
+      format("truetype"),
+    url("../public/fonts/Rubik/Rubik-Italic-VariableFont_wght.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   color: var(--color-foreground);
   background: var(--color-background);
-  font-family: Inter, Helvetica, Arial, sans-serif;
+  font-family: "SourceCodePro", Inter, Helvetica, Arial, sans-serif;
 }
 
 @layer base {
@@ -98,4 +108,3 @@ body {
   nocompatible: true;
   preferredstrategy: "pseudoelements";
 }
-

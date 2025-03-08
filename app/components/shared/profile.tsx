@@ -41,7 +41,7 @@ export const Profile: FC<ProfileProps> = ({ isMobile, className }) => {
           href="https://github.com/cauaosp"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-gray-900 text-white border border-white/25 px-3 py-1 rounded-lg flex items-center gap-x-2 font-light w-28 inset-shadow-xs inset-shadow-black/25"
+          className="bg-gray-900 text-white border border-white/25 px-3 py-1 rounded-lg flex items-center gap-x-2 font-light w-28 inset-shadow-sm inset-shadow-black/25"
         >
           <Github color={"#fff"} width={25} height={25} />
           <div>GitHub</div>
@@ -51,7 +51,7 @@ export const Profile: FC<ProfileProps> = ({ isMobile, className }) => {
           href="https://www.linkedin.com/in/cauaosp/"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-blue-600 text-white border border-white/25 px-3 py-1 rounded-lg flex items-center gap-x-2 font-light w-28 inset-shadow-xs inset-shadow-black/25"
+          className="bg-blue-600 text-white border border-white/25 px-3 py-1 rounded-lg flex items-center gap-x-2 font-light w-28 inset-shadow-sm inset-shadow-black/25"
         >
           <LinkedIn
             color={"var(--color-blue-600)"}
@@ -94,7 +94,7 @@ export const Profile: FC<ProfileProps> = ({ isMobile, className }) => {
           href="https://github.com/cauaosp"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-gray-900 text-white border border-white/25 px-3 py-1 rounded-lg flex items-center gap-x-2 font-light inset-shadow-xs inset-shadow-black/25"
+          className="bg-gray-900 text-white border border-white/25 px-3 py-1 rounded-lg flex items-center gap-x-2 font-light inset-shadow-sm inset-shadow-black/25"
         >
           <Github color={"#fff"} width={25} height={25} />
           <div>GitHub</div>
@@ -104,7 +104,7 @@ export const Profile: FC<ProfileProps> = ({ isMobile, className }) => {
           href="https://www.linkedin.com/in/cauaosp/"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-blue-600 text-white border border-white/25 px-3 py-1 rounded-lg flex items-center gap-x-2 font-light inset-shadow-xs inset-shadow-black/25"
+          className="bg-blue-600 text-white border border-white/25 px-3 py-1 rounded-lg flex items-center gap-x-2 font-light inset-shadow-sm inset-shadow-black/25"
         >
           <LinkedIn
             color={"var(--color-blue-600)"}

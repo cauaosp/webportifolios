@@ -9,7 +9,7 @@ export const Experiences = ({ ...props }) => {
     >
       <div className="flex flex-col gap-6 mb-15">
         <div
-          className={`font-bold ${props.isMobile ? "text-5xl" : "text-7xl"}`}
+          className={`font-bold ${props.isMobile ? "text-6xl" : "text-7xl"}`}
         >
           Full Stack Developer
         </div>
@@ -36,7 +36,7 @@ export const Experiences = ({ ...props }) => {
             }`}
           >
             <div className="font-bold text-xl">Fitbank</div>
-            <div className="flex justify-between text-emerald-400 text-xs">
+            <div className="flex justify-between text-emerald-400 text-sm">
               <div>Desenvolvedor Full Stack</div>
               <div>09/2023 - 01/2025</div>
             </div>
@@ -54,7 +54,7 @@ export const Experiences = ({ ...props }) => {
             }`}
           >
             <div className="font-bold text-xl">Include Jr</div>
-            <div className="flex justify-between text-emerald-400 text-xs">
+            <div className="flex justify-between text-emerald-400 text-sm">
               <div>Desenvolvedor</div>
               <div>12/2021 - 06/2023</div>
             </div>
