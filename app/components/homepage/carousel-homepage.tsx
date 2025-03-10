@@ -97,7 +97,7 @@ export const CarouselHomepage: React.FC<CarouselHomepageProps> = () => {
         <div className="flex gap-2">
           {slides.map((slide, index) => (
             <div key={index} className="flex-shrink-0 w-full px-2">
-              <Card className="2xl:h-64 w-full border-white/25 bg-white/5 text-white p-2 justify-between flex text-xs 2xl:text-sm">
+              <Card className="2xl:h-64 w-full border-white/25 bg-white/5 text-white p-2 justify-between flex text-xs 2xl:text-sm inset-shadow-sm inset-shadow-black/25">
                 <CardContent className="flex gap-y-3 flex-col w-full">
                   <CardTitle className="text-xl mb-1.5 2xl:text-2xl">
                     {slide.title}
