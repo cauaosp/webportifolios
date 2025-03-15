@@ -55,8 +55,12 @@ export const AgeCounter = () => {
     <Skeleton className="w-96 h-[20px] rounded-sm bg-emerald-400/50 inline-block" />
   ) : (
     <span className="text-emerald-400 font-mono">
-      {age.years} anos, {age.months} meses, {age.days} dias, {age.hours} horas,{" "}
-      {age.minutes} minutos e {age.seconds} segundos
+      {age.years} anos, {age.months}
+      {age.months > 1 ? " meses" : " mês"}, {age.days}
+      {age.days > 1 ? " dias" : " dia"}, {age.hours}
+      {age.hours > 1 ? " horas" : " hora"}, {age.minutes}
+      {age.minutes > 1 ? " minutos" : " minuto"} e {age.seconds}
+      {age.seconds > 1 ? " segundos" : " segundo"}
     </span>
   );
 };
