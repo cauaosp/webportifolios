@@ -30,7 +30,7 @@ export const ContactForms = ({ ...props }) => {
     <form
       ref={form}
       onSubmit={sendEmail}
-      className={`text-white text-justify grid grid-cols-2 grid-rows-4 gap-x-5 px-2 2xl:h-[30rem] 2xl:text-lg max-md:gap-y-1 scrollbar-thin scrollbar-track-rounded-full scrollbar-thumb-rounded-full scrollbar-thumb-emerald-400 scrollbar-track-gray-900 ${
+      className={`text-white text-justify grid grid-cols-2 grid-rows-4 gap-x-5 px-2 2xl:h-[30rem] 2xl:text-lg max-md:gap-y-1 scrollbar-thin scrollbar-track-rounded-full scrollbar-thumb-rounded-full scrollbar-thumb-emerald-400 scrollbar-track-gray-800 ${
         props.isMobile ? "mt-5" : "col-span-2"
       }`}
     >

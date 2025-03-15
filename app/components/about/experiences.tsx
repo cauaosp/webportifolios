@@ -3,8 +3,8 @@ export const Experiences = ({ ...props }) => {
     <div
       className={`text-white ${
         props.isMobile
-          ? "mt-5"
-          : "overflow-y-auto col-span-2 row-span-3 h-full max-h-[500px] scrollbar-thin scrollbar-track-rounded-full scrollbar-thumb-rounded-full scrollbar-thumb-emerald-400 scrollbar-track-gray-900"
+          ? "mt-5 pl-2"
+          : "overflow-y-auto col-span-2 row-span-3 h-full max-h-[500px] scrollbar-thin scrollbar-track-rounded-full scrollbar-thumb-rounded-full scrollbar-thumb-emerald-400 scrollbar-track-gray-800"
       }`}
     >
       <div className="flex flex-col gap-6 mb-15">

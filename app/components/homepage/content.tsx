@@ -33,7 +33,7 @@ export const HomepageContent = ({ ...props }) => {
   return isMobile ? (
     <div
       className={cn(
-        "flex flex-col overflow-y-auto overflow-x-hidden scrollbar-thin scrollbar-track-rounded-full scrollbar-thumb-rounded-full scrollbar-thumb-emerald-400 scrollbar-track-gray-900",
+        "flex flex-col overflow-y-auto overflow-x-hidden scrollbar-thin scrollbar-track-rounded-full scrollbar-thumb-rounded-full scrollbar-thumb-emerald-400 scrollbar-track-gray-800",
         props.mobileClassName
       )}
     >
@@ -51,7 +51,7 @@ export const HomepageContent = ({ ...props }) => {
   ) : (
     <div className="grid grid-cols-3 grid-rows-3 p-5 2xl:pt-10 gap-4 gap-y-2 overflow-hidden 2xl:mt-8 2xl:mb-0">
       <Profile />
-      <div className="col-span-2 overflow-auto row-span-3 scrollbar-thin scrollbar-track-rounded-full scrollbar-thumb-rounded-full scrollbar-thumb-emerald-400 scrollbar-track-gray-900 pr-2">
+      <div className="col-span-2 overflow-auto row-span-3 scrollbar-thin scrollbar-track-rounded-full scrollbar-thumb-rounded-full scrollbar-thumb-emerald-400 scrollbar-track-gray-800 pr-2">
         <div className=" text-white text-justify 2xl:text-lg">
           Olá, sou
           <span className="text-emerald-400"> Cauã OSP</span>, desenvolvedor

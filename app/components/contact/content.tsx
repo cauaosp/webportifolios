@@ -29,7 +29,7 @@ export const ContactContent = () => {
   }
 
   return isMobile ? (
-    <div className="flex flex-col overflow-auto scrollbar-thin scrollbar-track-rounded-full scrollbar-thumb-rounded-full scrollbar-thumb-emerald-400 scrollbar-track-gray-900">
+    <div className="flex flex-col overflow-auto scrollbar-thin scrollbar-track-rounded-full scrollbar-thumb-rounded-full scrollbar-thumb-emerald-400 scrollbar-track-gray-800">
       <Profile isMobile={isMobile} />
       <ContactForms isMobile={isMobile} />
     </div>
