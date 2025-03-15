@@ -7,7 +7,6 @@ import {
   CardDescription,
   CardTitle,
 } from "@/components/ui/card";
-import { cn } from "@/lib/utils";
 import useEmblaCarousel from "embla-carousel-react";
 import { ArrowLeftCircleIcon, ArrowRightCircleIcon } from "lucide-react";
 import { useCallback, useEffect, useState } from "react";
@@ -92,7 +91,7 @@ export const CarouselHomepage: React.FC<CarouselHomepageProps> = () => {
   ];
 
   return (
-    <div className={cn("col-span-2 min-md:overflow-x-hidden mt-5")}>
+    <div className="col-span-2 min-md:overflow-x-hidden mt-5 cursor-grab active:cursor-grabbing ">
       <div className="px-1" ref={emblaRef}>
         <div className="flex gap-2">
           {slides.map((slide, index) => (
