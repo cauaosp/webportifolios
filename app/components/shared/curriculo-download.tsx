@@ -11,7 +11,7 @@ export const CurriculoDownload = () => {
 
   const handleClick = async () => {
     try {
-      const response = await fetch("/download/curriculo-cauaosp.pdf");
+      const response = await fetch("/download/curriculo-cauaosp");
       const blob = await response.blob();
       const url = window.URL.createObjectURL(blob);
       const link = document.createElement("a");
