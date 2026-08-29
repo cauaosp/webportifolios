@@ -14,9 +14,8 @@ export default function RootLayout({
         <link rel="icon" href="/icons/code-svgrepo-green.svg" type="image/svg+xml" />
       </head>
       <body>
-        <div className="grid gap-2 h-screen bg-gray-950 pt-2 md:px-10 select-none">
+        <div>
           <TopMenu />
-          <CurriculoDownload />
           {children}
           <Footer />
         </div>
