@@ -10,7 +10,8 @@
   --surface-2: #141414;
   --accent: #10b981;
   --accent-foreground: #050505;
-  --accent-selection: #16FFB260;
+  --accent-selection: #16FFB220;
+  --text-selection: #16FFB2;
   --muted: #737373;
   --muted-foreground: #c4c4c4;
   --border: #262626;
@@ -24,7 +25,8 @@
   --surface-2: #141414;
   --accent: #10b981;
   --accent-foreground: #050505;
-  --accent-selection: #16FFB260;
+  --accent-selection: #16FFB220;
+  --text-selection: #16FFB2;
   --muted: #737373;
   --muted-foreground: #c4c4c4;
   --border: #262626;
@@ -83,7 +85,7 @@
 
   ::selection {
     background-color: var(--accent-selection);
-    color: var(--foreground);
+    color: var(--text-selection);
   }
 }
 
