@@ -107,7 +107,7 @@ export function Hero() {
 
           <div className="space-y-4 reveal">
             <div className="relative group">
-              <div className="absolute size-[500px] -inset-2 bg-accent/30 blur-3xl rounded-full opacity-40 group-hover:opacity-60 transition-opacity -left-32" />
+              <div className="absolute size-[500px] -inset-2 bg-accent/30 blur-3xl rounded-full opacity-20 group-hover:opacity-40 transition-opacity -left-32" />
               <div className="relative w-full aspect-4/5 bg-surface outline-1 -outline-offset-1 outline-white/5 rounded-lg overflow-hidden">
                 <img
                   src="images/perfil.jpg"
