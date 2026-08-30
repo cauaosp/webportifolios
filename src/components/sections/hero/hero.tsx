@@ -4,11 +4,11 @@ import { Card } from "@/src/components/ui/card";
 import { Github } from "../../icons/github";
 import { LinkedIn } from "../../icons/linkedin";
 import { useAgeCounter } from "./use-age-counter";
+import { cn } from "@/src/lib/utils";
+import { getOnlineStatus } from "@/src/lib/utils";
 
-
-
-  export function Hero() {
-    const {
+export function Hero() {
+  const {
       years,
       months,
       days,
@@ -16,6 +16,8 @@ import { useAgeCounter } from "./use-age-counter";
       minutes,
       seconds,
     } = useAgeCounter(new Date("2003-05-02T18:45:00"));
+  const isOnline = getOnlineStatus();
+
 
   return (
     <section className="relative py-24 md:py-32 px-6 border-b border-border overflow-hidden">
@@ -146,8 +148,8 @@ import { useAgeCounter } from "./use-age-counter";
               <div className="flex justify-between text-muted-foreground">
                 <span>status</span>
                 <span className="text-accent flex items-center gap-1.5">
-                  <span className="size-1.5 rounded-full bg-accent animate-pulse" />
-                  online
+                  <span className={`size-1.5 rounded-full animate-pulse ${isOnline ? "bg-accent" : "bg-red-400"}`} />
+                {isOnline ? "online" : "studying"}
                 </span>
               </div>
             </Card>

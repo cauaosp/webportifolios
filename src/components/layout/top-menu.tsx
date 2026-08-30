@@ -2,11 +2,15 @@
 
 import { FileDownload } from "@/src/components/icons";
 import { Button } from "@/src/components/ui/button";
+import { getOnlineStatus } from "@/src/lib/utils";
 import { useState } from "react";
+
 
 export const TopMenu = () => {
   const [downloadStatus, setDownloadStatus] = useState("");
   const [showStatus, setShowStatus] = useState(false);
+  const isOnline = getOnlineStatus();
+
   const handleClick = async () => {
     try {
       const response = await fetch("/download/curriculo-cauaosp");
@@ -31,32 +35,18 @@ export const TopMenu = () => {
     }
   };
 
-  const isOnline = (() => {
-    const hour = new Date().getHours();
-
-    return hour >= 6 && hour < 18;
-  })();
-
   return (
     <>
       {/* Mobile */}
       <nav className="md:hidden fixed top-0 w-full z-50 border-b bg-background/80 backdrop-blur-md flex justify-between items-center p-4">
         <a href="#top" className="flex items-center gap-2">
-          <div className="relative flex justify-center items-center size-3">
             <span
-              className={`size-2 rounded-full ${
-                isOnline ? "bg-accent" : "bg-red-400"
-              }`}
-            />
-
-            <span
-              className={`absolute size-2 rounded-full animate-ping ${
+              className={`size-1.5 rounded-full animate-ping ${
                 isOnline
-                  ? "bg-accent shadow-[0_0_5px_var(--color-accent)]"
-                  : "bg-red-400 shadow-[0_0_5px_#ef4444]"
-              }`}
-            />
-          </div>
+                  ? "bg-accent"
+                  : "bg-red-400"
+            }`}
+          />
 
           <span className="font-mono text-sm tracking-tight text-foreground uppercase">
             caua_osp<span className="text-accent">.dev</span>
@@ -87,21 +77,13 @@ export const TopMenu = () => {
       <nav className="hidden md:block fixed top-0 w-full z-50 border-b border-border bg-background/80 backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-6 h-14 flex items-center justify-between">
           <a href="#top" className="flex items-center gap-3">
-            <div className="relative flex justify-center items-center size-3">
-              <span
-                className={`size-2 rounded-full ${
-                  isOnline ? "bg-accent" : "bg-red-400"
-                }`}
-              />
-
-              <span
-                className={`absolute size-2 rounded-full animate-ping ${
-                  isOnline
-                    ? "bg-accent shadow-[0_0_5px_var(--color-accent)]"
-                    : "bg-red-400 shadow-[0_0_5px_#ef4444]"
-                }`}
-              />
-            </div>
+            <span
+              className={`size-1.5 rounded-full animate-pulse ${
+                isOnline
+                  ? "bg-accent"
+                  : "bg-red-400"
+              }`}
+            />
 
             <span className="font-mono text-sm tracking-tight text-foreground uppercase">
               caua_osp<span className="text-accent">.dev</span>
