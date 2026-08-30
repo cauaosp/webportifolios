@@ -1,11 +1,10 @@
 "use client";
 
 import { Card } from "@/src/components/ui/card";
+import { getOnlineStatus } from "@/src/lib/utils";
 import { Github } from "../../icons/github";
 import { LinkedIn } from "../../icons/linkedin";
 import { useAgeCounter } from "./use-age-counter";
-import { cn } from "@/src/lib/utils";
-import { getOnlineStatus } from "@/src/lib/utils";
 
 export function Hero() {
   const {
@@ -39,15 +38,13 @@ export function Hero() {
                 <span className="text-muted">OLIVEIRA</span>
               </h1>
               <div className="flex items-center gap-3 font-mono text-base md:text-lg text-accent pt-2">
-                <span>&gt; Data Engineering</span>
+                <span>&gt; Data Engineer</span>
                 <span className="w-2.5 h-5 bg-accent cursor-blink inline-block" />
               </div>
             </div>
 
             <p className="text-base md:text-lg text-muted-foreground max-w-[58ch] leading-relaxed">
-              Desenvolvedor nascido e criado em <span className="text-foreground">Fortaleza — CE</span>.
-              Foco em construir soluções completas do banco de dados até o front-end,
-              dominando ferramentas modernas e arquitetura limpa.
+              Desenvolvedor nascido e criado em <span className="text-foreground">Fortaleza — CE</span>. Estudo processos ETL, Machine Learning e Web Scraping para transformar dados brutos em informação útil e criar sistemas integrados eficientes.
             </p>
 
             <div className="flex flex-wrap gap-3">
@@ -110,8 +107,8 @@ export function Hero() {
 
           <div className="space-y-4 reveal">
             <div className="relative group">
-              <div className="absolute -inset-2 bg-accent/20 blur-3xl rounded-full opacity-30 group-hover:opacity-60 transition-opacity" />
-              <div className="relative w-full aspect-[4/5] bg-surface outline outline-1 -outline-offset-1 outline-white/5 rounded-lg overflow-hidden">
+              <div className="absolute size-[500px] -inset-2 bg-accent/30 blur-3xl rounded-full opacity-40 group-hover:opacity-60 transition-opacity -left-32" />
+              <div className="relative w-full aspect-4/5 bg-surface outline-1 -outline-offset-1 outline-white/5 rounded-lg overflow-hidden">
                 <img
                   src="images/perfil.jpg"
                   alt="Cauã de Oliveira Silva Paiva"
