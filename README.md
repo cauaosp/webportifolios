@@ -4,11 +4,10 @@ Uma vitrine pessoal para apresentar-me e mostrar projetos, experiências, tecnol
 
 🌐 url pública: https://webportifolios.vercel.app/
 
----
-### 🧑‍💻 Stacks
+## 🧑‍💻 Stacks
 
 🎨 Frontend: `TypeScript` • `React` • `Next.js`
 
 🚀 Deploy: `Vercel`
 
-☕ Desenvolvido por [Cauã Paiva](https://github.com/cauaosp)
+###### ☸️ Desenvolvido por [Cauã Paiva](https://github.com/cauaosp)
