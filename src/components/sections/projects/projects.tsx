@@ -7,7 +7,7 @@ export function Projects() {
   return (
     <section id="projetos" className="py-24 px-6 border-b border-border">
       <div className="max-w-7xl mx-auto">
-      <SectionHeader index="section_04" label="// projetos" icon={FolderGit2} />
+      <SectionHeader label="// projetos" icon={FolderGit2} />
 
       <div className="grid md:grid-cols-3 gap-6">
         {PROJECTS.map((p, i) => (

@@ -5,7 +5,7 @@ export function Experiences() {
   return (
     <section id="experiencias" className="py-24 px-6 border-b border-border">
       <div className="max-w-7xl mx-auto">
-        <SectionHeader index="section_03" label="// experiências profissionais" icon={Briefcase} />
+        <SectionHeader label="// experiências profissionais" icon={Briefcase} />
 
         <ol className="relative border-l border-border ml-3 space-y-12">
           {JOBS.map((job, i) => (

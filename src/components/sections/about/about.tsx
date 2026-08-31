@@ -9,7 +9,7 @@ export function About() {
   return (
     <section id="resumo" className="py-20 px-6 border-b border-border">
       <div className="max-w-7xl mx-auto">
-        <SectionHeader index="section_01" label="// resumo" icon={BookOpen} />
+        <SectionHeader label="// resumo" icon={BookOpen} />
 
         <div className="grid lg:grid-cols-[1fr_420px] gap-12">
           <div className="max-w-2xl text-lg text-muted-foreground leading-relaxed space-y-4">

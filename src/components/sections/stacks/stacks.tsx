@@ -6,7 +6,7 @@ export function Stacks() {
   return (
     <section id="stack" className="py-20 px-6 border-b border-border">
       <div className="max-w-7xl mx-auto">
-        <SectionHeader index="section_02" label="// stacks" icon={Code2} />
+        <SectionHeader label="// stacks" icon={Code2} />
 
         <div className="grid md:grid-cols-3 gap-px bg-border overflow-hidden rounded-lg border border-border">
           {/* Conhecimentos */}
