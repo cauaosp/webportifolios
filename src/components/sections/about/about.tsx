@@ -1,13 +1,13 @@
 "use client"
 
 import { Card } from "@/src/components/ui/card";
+import { SectionHeader } from "@/src/components/ui/section-header";
 import { BookOpen, Languages } from "lucide-react";
-import { IconBadge } from "./icon-badge";
-import { SectionHeader } from "./section-header";
+import { IconBadge } from "@/src/components/ui/icon-badge";
 
 export function About() {
   return (
-    <section id="resumo" className="py-24 px-6 border-b border-border">
+    <section id="resumo" className="py-20 px-6 border-b border-border">
       <div className="max-w-7xl mx-auto">
         <SectionHeader index="section_01" label="// resumo" icon={BookOpen} />
 

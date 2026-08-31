@@ -8,7 +8,7 @@ export function Hero() {
   const isOnline = getOnlineStatus();
 
   return (
-    <section className="relative py-24 md:py-32 px-6 border-b border-border overflow-hidden">
+    <section className="relative py-20 md:py-32 px-6 border-b border-border overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-[1fr_320px] gap-12 lg:gap-16 items-start">
           <div className="space-y-8 reveal">
