@@ -118,7 +118,7 @@ const PROJECTS = [
       "Vitrine para apresentação profissional.",
     image: "/images/webportfolio.png",
     tech: ["Next.js", "TypeScript"],
-    live: "#",
-    repo: "https://github.com/cauaosp",
+    live: "https://webportifolios.vercel.app/",
+    repo: "https://github.com/cauaosp/webportifolios",
   },
 ];
