@@ -1,9 +1,9 @@
 "use client"
 
 import { Card } from "@/src/components/ui/card";
+import { IconBadge } from "@/src/components/ui/icon-badge";
 import { SectionHeader } from "@/src/components/ui/section-header";
 import { BookOpen, Languages } from "lucide-react";
-import { IconBadge } from "@/src/components/ui/icon-badge";
 
 export function About() {
   return (

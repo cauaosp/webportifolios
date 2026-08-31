@@ -1,6 +1,6 @@
-import { SectionHeader } from "@/src/components/ui/section-header";
-import { Code2, BookOpen, Zap } from "lucide-react";
 import { IconBadge } from "@/src/components/ui/icon-badge";
+import { SectionHeader } from "@/src/components/ui/section-header";
+import { BookOpen, Code2, Zap } from "lucide-react";
 
 export function Stacks() {
   return (
@@ -108,6 +108,9 @@ const KNOWLEDGE = [
   "POO",
   "Web Design",
   "Levantamento de requisitos",
+  "Conventional Commits",
+  "Linux",
+  "API REST"
 ];
 
 const EXPERIENCE = [
@@ -123,15 +126,17 @@ const EXPERIENCE = [
   "WordPress",
   "Redis",
   "MySQL",
-  "Node.js",
+  "Node",
   "Lovable",
   "Firebase",
   "Vite",
   "Supabase",
   "Gitlab",
-  "Express.js",
+  "Express",
   "Claude",
-  "ChatGPT"
+  "ChatGPT",
+  "Minikube",
+  "React",
 ];
 
 const LANGUAGES = [
