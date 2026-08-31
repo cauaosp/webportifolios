@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export function Projects() {
   return (
-    <section id="projetos" className="py-24 px-6 border-b border-border">
+    <section id="projetos" className="py-20 px-6 border-b border-border">
       <div className="max-w-7xl mx-auto">
       <SectionHeader label="// projetos" icon={FolderGit2} />
 
@@ -110,7 +110,7 @@ const PROJECTS = [
     image: "/images/mandachuva.png",
     tech: ["Express.js", "Vite", "Vitest", "TypeScript"],
     live: "https://mandachuva.onrender.com/",
-    repo: "https://github.com/cauaosp",
+    repo: "https://github.com/cauaosp/mandachuva",
   },
   {
     title: "Webportfolio",

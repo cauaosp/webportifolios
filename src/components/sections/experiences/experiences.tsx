@@ -3,7 +3,7 @@ import { Briefcase } from "lucide-react";
 
 export function Experiences() {
   return (
-    <section id="experiencias" className="py-24 px-6 border-b border-border">
+    <section id="experiencias" className="py-20 px-6 border-b border-border">
       <div className="max-w-7xl mx-auto">
         <SectionHeader label="// experiências profissionais" icon={Briefcase} />
 
@@ -23,7 +23,7 @@ export function Experiences() {
                 {job.role}
               </h3>
               <p className="text-xs text-muted-foreground mt-1">{job.period}</p>
-              <p className="text-muted-foreground mt-3 max-w-3xl leading-relaxed tracking-tight">
+              <p className="text-muted-foreground mt-3 max-w-3xl leading-relaxed tracking-tighter">
                 {job.description}
               </p>
               <div className="flex flex-wrap gap-2 mt-4">
@@ -50,7 +50,7 @@ const JOBS = [
     role: "Técnico de T.I.",
     company: "Carmel Hotéis",
     description:
-      "Atuei com suporte e manutenção de computadores, servidores e redes. Automatizei o monitoramento de impressoras com Python e configurei servidores em Raspberry Pi para rotinas do hotel. Também trabalhei com sistemas ERP e suas regras de acesso e operação, desenvolvendo experiência prática com infraestrutura, redes e automação.",
+      "Atuei com suporte e manutenção de computadores, servidores e redes. Automatizei o monitoramento de impressoras com Python e configurei Raspberry Pi para rotinas de música no hotel, trabalhei com sistemas ERP para automação de processos e governança, desenvolvendo experiência prática com infraestrutura e redes.",
     tech: ["Python", "Raspberry Pi", "Oracle", "CMFlex"],
   },
   {
@@ -59,7 +59,7 @@ const JOBS = [
     role: "Desenvolvedor Full Stack",
     company: "Fitbank",
     description:
-      "Atuei no desenvolvimento e integração de APIs e microsserviços em um ambiente de alta disponibilidade. Trabalhei com sistemas relacionados ao PIX, segurança e processamento de dados, utilizando Redis, RabbitMQ e .NET. Também participei de pipelines de CI/CD e apliquei boas práticas de engenharia de software em sistemas escaláveis.",
+      "Desenvolvi softwares, integração de APIs e microsserviços. Trabalhei com sistemas PIX, segurança e processamento de dados, experenciei Redis, RabbitMQ e .NET. Participei de pipelines de CI/CD e apliquei boas práticas de engenharia de software em sistemas escaláveis e de alta complexidade.",
     tech: ["RabbitMQ", "Redis", "C#", "TypeScript", "Next.js", ".NET", "Elasticsearch", "Azure", "MySQL"]
   },
   {
