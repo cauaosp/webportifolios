@@ -1,22 +1,11 @@
-"use client";
-
 import { Card } from "@/src/components/ui/card";
 import { getOnlineStatus } from "@/src/lib/utils";
 import { Github } from "../../icons/github";
 import { LinkedIn } from "../../icons/linkedin";
-import { useAgeCounter } from "./use-age-counter";
+import { AgeCounter } from "./use-age-counter";
 
 export function Hero() {
-  const {
-      years,
-      months,
-      days,
-      hours,
-      minutes,
-      seconds,
-    } = useAgeCounter(new Date("2003-05-02T18:45:00"));
   const isOnline = getOnlineStatus();
-
 
   return (
     <section className="relative py-24 md:py-32 px-6 border-b border-border overflow-hidden">
@@ -82,32 +71,12 @@ export function Hero() {
               </a>
             </div>
 
-            <dl className="grid grid-cols-4 gap-4 pt-8 border-t border-border font-mono max-w-lg">
-              <div>
-                <dt className="text-[9px] uppercase tracking-widest text-muted-foreground">Anos</dt>
-                <dd className="text-xl text-foreground mt-1 tabular-nums">{years}</dd>
-              </div>
-              <div>
-                <dt className="text-[9px] uppercase tracking-widest text-muted-foreground">Dias</dt>
-                <dd className="text-xl text-foreground mt-1 tabular-nums">{days}</dd>
-              </div>
-              <div>
-                <dt className="text-[9px] uppercase tracking-widest text-muted-foreground">{months == 1 ? "Mês" : "Meses"}</dt>
-                <dd className="text-xl text-foreground mt-1">{months}</dd>
-              </div>
-              <div>
-                <dt className="text-[9px] uppercase tracking-widest text-muted-foreground">Uptime</dt>
-                <dd className="text-xl text-accent mt-1 tabular-nums">
-                  {String(hours).padStart(2, "0")}:{String(minutes).padStart(2, "0")}:
-                  {String(seconds).padStart(2, "0")}
-                </dd>
-              </div>
-            </dl>
+            <AgeCounter />
           </div>
 
           <div className="space-y-4 reveal">
             <div className="relative group">
-              <div className="absolute size-[500px] -inset-2 bg-accent/30 blur-3xl rounded-full opacity-20 group-hover:opacity-40 transition-opacity -left-32" />
+              <div className="absolute size-125 -inset-2 bg-accent/30 blur-3xl rounded-full opacity-20 group-hover:opacity-40 transition-opacity -left-28" />
               <div className="relative w-full aspect-4/5 bg-surface outline-1 -outline-offset-1 outline-white/5 rounded-lg overflow-hidden">
                 <img
                   src="images/perfil.jpg"

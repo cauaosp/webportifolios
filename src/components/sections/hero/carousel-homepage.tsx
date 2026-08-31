@@ -1,4 +1,5 @@
-import { CarouselHomepageProps, HomepageSlidesEntity } from "@/src/types";
+"use client"
+
 import { EducationCap, GitBranch, Tags } from "@/src/components/icons";
 import { Button } from "@/src/components/ui/button";
 import {
@@ -7,6 +8,7 @@ import {
   CardDescription,
   CardTitle,
 } from "@/src/components/ui/card";
+import { CarouselHomepageProps, HomepageSlidesEntity } from "@/src/types";
 import useEmblaCarousel from "embla-carousel-react";
 import { ArrowLeftCircleIcon, ArrowRightCircleIcon } from "lucide-react";
 import { useCallback, useEffect, useState } from "react";
