@@ -10,7 +10,7 @@ export const Footer = () => {
           height={20}
           color={"var(--accent)"}
         />
-        <div className="absolute bg-accent opacity-30 size-4 animate-pulse blur-sm top-1 left-0.5"></div>
+        <div className="absolute bg-accent opacity-60 size-4 animate-pulse blur-sm top-1 left-0.5"></div>
       </div>
     </div>
   );
