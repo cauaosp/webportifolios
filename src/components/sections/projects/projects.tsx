@@ -43,7 +43,7 @@ export function Projects() {
                 </div>
               )}
               <div className="absolute top-3 left-3 flex items-center gap-2 font-mono text-[10px] text-muted-foreground bg-background/70 backdrop-blur px-2 py-1 rounded-sm ring-1 ring-border">
-                <span className="size-1.5 rounded-full bg-accent" />
+                <span className="size-1.5 rotate-45 bg-accent" />
                 proj_{String(i + 1).padStart(2, "0")}
               </div>
             </div>

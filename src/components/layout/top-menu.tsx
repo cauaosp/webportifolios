@@ -41,7 +41,7 @@ export const TopMenu = () => {
       <nav className="md:hidden fixed top-0 w-full z-50 border-b bg-background/80 backdrop-blur-md flex justify-between items-center p-4">
         <a href="#top" className="flex items-center gap-2">
             <span
-              className={`size-1.5 rounded-full animate-ping ${
+              className={`size-1.5 rounded-full animate-pulse ${
                 isOnline
                   ? "bg-accent"
                   : "bg-red-400"

@@ -11,7 +11,7 @@ export function Experiences() {
           {JOBS.map((job, i) => (
             <li key={i} className="pl-8 relative group">
               <span
-                className={`absolute -left-1.75 top-1 size-3 rounded-full ring-4 ring-background transition-colors ${job.isWorking === 1
+                className={`absolute -left-1.75 top-1 size-3 rotate-45 ring-4 ring-background transition-colors ${job.isWorking === 1
                     ? "bg-accent"
                     : "bg-surface border border-border group-hover:bg-accent/60"
                   }`}
