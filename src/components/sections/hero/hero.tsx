@@ -1,13 +1,11 @@
 import { Card } from "@/src/components/ui/card";
-import { getOnlineStatus } from "@/src/lib/utils";
+import { OnlineStatus } from "@/src/components/ui/online-status";
 import Image from "next/image";
 import { Github } from "../../icons/github";
 import { LinkedIn } from "../../icons/linkedin";
 import { AgeCounter } from "./use-age-counter";
 
 export function Hero() {
-  const isOnline = getOnlineStatus();
-
   return (
     <section id="top" className="relative py-24 md:py-32 px-6 border-b border-border overflow-hidden">
       <div className="max-w-7xl mx-auto">
@@ -113,10 +111,7 @@ export function Hero() {
               </div>
               <div className="flex justify-between text-muted-foreground">
                 <span>status</span>
-                <span className="text-accent flex items-center gap-1.5">
-                  <span className={`size-1.5 rounded-full animate-pulse ${isOnline ? "bg-accent" : "bg-red-400"}`} />
-                {isOnline ? "online" : "studying"}
-                </span>
+                <OnlineStatus hero={true} />
               </div>
             </Card>
           </div>
