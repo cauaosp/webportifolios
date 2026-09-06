@@ -8,7 +8,7 @@ import { Stacks } from "../components/sections/stacks";
 
 export default function HomePage() {
   return (
-    <main className="terminal-grid h-screen overflow-auto scroll-smooth">
+    <main className="terminal-grid h-screen overflow-auto scroll-smooth scrollbar-thumb-muted-foreground scrollbar-thin">
       <Hero />
       <About />
       <Stacks />
