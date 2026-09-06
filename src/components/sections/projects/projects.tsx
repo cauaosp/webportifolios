@@ -71,7 +71,7 @@ export function Projects() {
                   href={p.live}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-4 py-2 rounded-sm font-mono text-xs uppercase tracking-widest hover:bg-accent/90 transition-colors"
+                  className="inline-flex items-center gap-2 ring-1 ring-border bg-accent text-accent-foreground px-4 py-2 rounded-sm font-mono text-xs uppercase tracking-widest hover:text-accent hover:ring-accent hover:bg-transparent transition-colors"
                 >
                   <ExternalLink className="size-3.5" /> Website
                 </a>
@@ -81,7 +81,7 @@ export function Projects() {
                   rel="noreferrer"
                   className="inline-flex items-center gap-2 ring-1 ring-border text-foreground px-4 py-2 rounded-sm font-mono text-xs uppercase tracking-widest hover:ring-accent hover:text-accent transition-colors"
                 >
-                  <Github className="size-3.5" /> Source
+                  <Github className="size-3.5" /> Repositório
                 </a>
               </div>
             </div>
