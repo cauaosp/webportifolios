@@ -42,9 +42,9 @@ export function Projects() {
                   </span>
                 </div>
               )}
-              <div className="absolute top-3 left-3 flex items-center gap-2 font-mono text-[10px] text-muted-foreground bg-background/70 backdrop-blur px-2 py-1 rounded-sm ring-1 ring-border">
+              <div className="absolute top-2 left-2 flex items-center gap-2 opacity-60 font-mono text-[10px] text-muted-foreground bg-background/70 backdrop-blur p-2">
                 <span className="size-1.5 rotate-45 bg-accent" />
-                proj_{String(i + 1).padStart(2, "0")}
+                projeto {String(i + 1).padStart(2, "0")}
               </div>
             </div>
             <div className="p-6 flex flex-col flex-1">
