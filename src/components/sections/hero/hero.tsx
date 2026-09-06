@@ -83,6 +83,8 @@ export function Hero() {
                   width={400}
                   height={500}
                   className="w-full h-full object-cover grayscale contrast-125 group-hover:grayscale-0 transition-all duration-700 mask-y-from-75%"
+                  priority
+                  loading="eager"
                 />                <div className="absolute inset-0 bg-linear-to-t from-background via-transparent to-transparent pointer-events-none" />
                 <div className="absolute top-3 left-3 right-3 flex justify-between font-mono text-[10px] text-muted-foreground">
                   <span>M3_C0N_TR4T4.RAW</span>
