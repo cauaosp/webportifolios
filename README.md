@@ -8,7 +8,7 @@ Uma vitrine pessoal para apresentar-me e mostrar projetos, experiências, tecnol
 
 ## 🧑‍💻 Stacks
 
-🎨 Frontend: `TypeScript` • `React` • `Next.js`
+🎨 Frontend: `TypeScript` • `React` • `Next.js` • `TailwindCSS` • `Bun` • `shadcn/ui`
 
 🚀 Deploy: `Vercel`
 

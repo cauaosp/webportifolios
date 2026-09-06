@@ -59,7 +59,7 @@ export function Projects() {
                 {p.tech.map((t) => (
                   <span
                     key={t}
-                    className="font-mono text-[11px] px-2.5 py-1 bg-surface-2 ring-1 ring-border rounded-sm text-foreground/80"
+                    className="font-mono text-[11px] px-2.5 py-1 bg-surface-2 ring-1 ring-border rounded-sm text-foreground/80 hover:ring-accent hover:text-accent transition-colors"
                   >
                     {t}
                   </span>
@@ -117,7 +117,7 @@ const PROJECTS = [
     summary:
       "Vitrine para apresentação profissional.",
     image: "/images/webportfolio.png",
-    tech: ["Next.js", "TypeScript"],
+    tech: ["Next.js", "TypeScript", "TailwindCSS", "Bun"],
     live: "https://webportifolios.vercel.app/",
     repo: "https://github.com/cauaosp/webportifolios",
   },
