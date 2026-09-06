@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export function Projects() {
   return (
-    <section id="projetos" className="py-24 px-6 border-b border-border">
+    <section id="projetos" className="py-20 px-6 border-b border-border">
       <div className="max-w-7xl mx-auto">
       <SectionHeader label="// projetos" icon={FolderGit2} />
 
@@ -43,7 +43,7 @@ export function Projects() {
                 </div>
               )}
               <div className="absolute top-3 left-3 flex items-center gap-2 font-mono text-[10px] text-muted-foreground bg-background/70 backdrop-blur px-2 py-1 rounded-sm ring-1 ring-border">
-                <span className="size-1.5 rounded-full bg-accent" />
+                <span className="size-1.5 rotate-45 bg-accent" />
                 proj_{String(i + 1).padStart(2, "0")}
               </div>
             </div>
@@ -110,7 +110,7 @@ const PROJECTS = [
     image: "/images/mandachuva.png",
     tech: ["Express.js", "Vite", "Vitest", "TypeScript"],
     live: "https://mandachuva.onrender.com/",
-    repo: "https://github.com/cauaosp",
+    repo: "https://github.com/cauaosp/mandachuva",
   },
   {
     title: "Webportfolio",

@@ -1,5 +1,6 @@
 import { Card } from "@/src/components/ui/card";
 import { getOnlineStatus } from "@/src/lib/utils";
+import Image from "next/image";
 import { Github } from "../../icons/github";
 import { LinkedIn } from "../../icons/linkedin";
 import { AgeCounter } from "./use-age-counter";
@@ -75,17 +76,16 @@ export function Hero() {
           </div>
 
           <div className="space-y-4 reveal">
-            <div className="relative group">
+            <div className="hidden sm:block max-w-md relative group">
               <div className="absolute size-125 -inset-2 bg-accent/30 blur-3xl rounded-full opacity-20 group-hover:opacity-40 transition-opacity -left-28" />
               <div className="relative w-full aspect-4/5 bg-surface outline-1 -outline-offset-1 outline-white/5 rounded-lg overflow-hidden">
-                <img
-                  src="images/perfil.jpg"
+                <Image
+                  src="/images/perfil.jpg"
                   alt="Cauã de Oliveira Silva Paiva"
                   width={400}
                   height={500}
                   className="w-full h-full object-cover grayscale contrast-125 group-hover:grayscale-0 transition-all duration-700 mask-y-from-75%"
-                />
-                <div className="absolute inset-0 bg-linear-to-t from-background via-transparent to-transparent pointer-events-none" />
+                />                <div className="absolute inset-0 bg-linear-to-t from-background via-transparent to-transparent pointer-events-none" />
                 <div className="absolute top-3 left-3 right-3 flex justify-between font-mono text-[10px] text-muted-foreground">
                   <span>M3_C0N_TR4T4.RAW</span>
                   <span className="text-accent">● REC</span>
@@ -98,14 +98,14 @@ export function Hero() {
               </div>
             </div>
 
-            <Card className="p-5 font-mono text-xs space-y-2.5">
+            <Card className="p-5 font-mono text-xs space-y-2.5 ">
               <div className="flex justify-between text-muted-foreground">
                 <span>location</span>
-                <span className="text-foreground">Fortaleza / CE</span>
+                <span className="text-foreground">Ceará</span>
               </div>
               <div className="flex justify-between text-muted-foreground">
                 <span>region</span>
-                <span className="text-foreground">América do Sul</span>
+                <span className="text-foreground">South America</span>
               </div>
               <div className="flex justify-between text-muted-foreground">
                 <span>focus</span>
