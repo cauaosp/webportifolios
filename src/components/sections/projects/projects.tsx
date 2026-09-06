@@ -42,9 +42,9 @@ export function Projects() {
                   </span>
                 </div>
               )}
-              <div className="absolute top-3 left-3 flex items-center gap-2 font-mono text-[10px] text-muted-foreground bg-background/70 backdrop-blur px-2 py-1 rounded-sm ring-1 ring-border">
+              <div className="absolute top-2 left-2 flex items-center gap-2 opacity-60 font-mono text-[10px] text-muted-foreground bg-background/70 backdrop-blur p-2">
                 <span className="size-1.5 rotate-45 bg-accent" />
-                proj_{String(i + 1).padStart(2, "0")}
+                projeto {String(i + 1).padStart(2, "0")}
               </div>
             </div>
             <div className="p-6 flex flex-col flex-1">
@@ -71,7 +71,7 @@ export function Projects() {
                   href={p.live}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-4 py-2 rounded-sm font-mono text-xs uppercase tracking-widest hover:bg-accent/90 transition-colors"
+                  className="inline-flex items-center gap-2 ring-1 ring-border bg-accent text-accent-foreground px-4 py-2 rounded-sm font-mono text-xs uppercase tracking-widest hover:text-accent hover:ring-accent hover:bg-transparent transition-colors"
                 >
                   <ExternalLink className="size-3.5" /> Website
                 </a>
@@ -81,7 +81,7 @@ export function Projects() {
                   rel="noreferrer"
                   className="inline-flex items-center gap-2 ring-1 ring-border text-foreground px-4 py-2 rounded-sm font-mono text-xs uppercase tracking-widest hover:ring-accent hover:text-accent transition-colors"
                 >
-                  <Github className="size-3.5" /> Source
+                  <Github className="size-3.5" /> Repositório
                 </a>
               </div>
             </div>

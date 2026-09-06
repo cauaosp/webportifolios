@@ -91,7 +91,7 @@
 
 @utility terminal-grid {
   background-size: 40px 40px;
-  background-image: radial-gradient(circle, #171717 1px, transparent 1px);
+  background-image: radial-gradient(circle, #f5f5f511 1px, transparent 1px);
 }
 
 @utility cursor-blink {

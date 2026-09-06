@@ -1,4 +1,4 @@
-import { Footer, TopMenu } from "../components/layout";
+import { TopMenu } from "../components/layout";
 import "./globals.css";
 
 export default function RootLayout({
@@ -17,7 +17,6 @@ export default function RootLayout({
         <div>
           <TopMenu />
           {children}
-          <Footer />
         </div>
       </body>
     </html>

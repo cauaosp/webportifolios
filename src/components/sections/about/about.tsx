@@ -12,7 +12,7 @@ export function About() {
         <SectionHeader label="// resumo" icon={BookOpen} />
 
         <div className="grid lg:grid-cols-[1fr_420px] gap-12">
-          <div className="max-w-2xl text-lg text-muted-foreground leading-relaxed space-y-4">
+          <div className="max-w-2xl text-base md:text-lg text-muted-foreground leading-relaxed space-y-4">
             <p>
               Olá, estou graduando em <span className="text-foreground">Análise e Desenvolvimento de Sistemas</span> na UNIFOR e quero seguir a carreira de <span className="text-foreground">Engenharia de Dados</span>. Atualmente, desenvolvo projetos voltados à construção de pipelines de dados e integração entre sistemas em ambientes de nuvem.
             </p>

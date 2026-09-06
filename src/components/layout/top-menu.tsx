@@ -2,6 +2,7 @@
 
 import { FileDownload } from "@/src/components/icons";
 import { Button } from "@/src/components/ui/button";
+import { OnlineStatus } from "@/src/components/ui/online-status";
 import { getOnlineStatus } from "@/src/lib/utils";
 import { useState } from "react";
 
@@ -38,16 +39,9 @@ export const TopMenu = () => {
   return (
     <>
       {/* Mobile */}
-      <nav className="md:hidden fixed top-0 w-full z-50 border-b bg-background/80 backdrop-blur-md flex justify-between items-center p-4">
+      <nav className="md:hidden fixed top-0 w-full z-50 border-b bg-background/80 backdrop-blur-md flex justify-between items-center p-5">
         <a href="#top" className="flex items-center gap-2">
-            <span
-              className={`size-1.5 rounded-full animate-pulse ${
-                isOnline
-                  ? "bg-accent"
-                  : "bg-red-400"
-            }`}
-          />
-
+            <OnlineStatus />
           <span className="font-mono text-sm tracking-tight text-foreground uppercase">
             caua_osp<span className="text-accent">.dev</span>
           </span>
@@ -55,9 +49,9 @@ export const TopMenu = () => {
 
         <Button
           onClick={handleClick}
-          className="active:bg-accent/10 bg-transparent border-accent border rounded-lg text-accent"
+          className="border-b border-border bg-muted-foreground/5 rounded-sm text-muted-foreground active:text-accent active:bg-accent/10"
         >
-          <FileDownload width={15} height={15} color={"#10b981"} />
+          <FileDownload width={15} height={15} color="CurrentColor" />
           <span>Currículo</span>
           {showStatus && (
             <div
@@ -77,13 +71,7 @@ export const TopMenu = () => {
       <nav className="hidden md:block fixed top-0 w-full z-50 border-b border-border bg-background/80 backdrop-blur-md">
         <div className="max-w-7xl mx-auto px-6 h-14 flex items-center justify-between">
           <a href="#top" className="flex items-center gap-3">
-            <span
-              className={`size-1.5 rounded-full animate-pulse ${
-                isOnline
-                  ? "bg-accent"
-                  : "bg-red-400"
-              }`}
-            />
+            <OnlineStatus />
 
             <span className="font-mono text-sm tracking-tight text-foreground uppercase">
               caua_osp<span className="text-accent">.dev</span>
@@ -105,9 +93,9 @@ export const TopMenu = () => {
             </a>
             <Button
               onClick={handleClick}
-              className="hover:bg-accent/10 bg-transparent border-accent border rounded-lg text-accent hover:cursor-pointer"
+              className="border-b border-border bg-muted-foreground/5 rounded-sm text-muted-foreground hover:cursor-pointer hover:bg-accent/10 hover:text-accent hover:border-accent"
             >
-              <FileDownload width={15} height={15} color={"#10b981"} />
+              <FileDownload width={15} height={15} color="CurrentColor" />
               <span>Currículo</span>
               {showStatus && (
                 <div
