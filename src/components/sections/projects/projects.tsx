@@ -99,7 +99,7 @@ const PROJECTS = [
     summary:
       "Site para descobrir o que está acontecendo em Fortaleza centralizando as notícias.",
     image: "/images/role-fortal.png",
-    tech: ["Python", "Docker", "Minikube", "TypeScript", "Vite", "Flask"],
+    tech: ["Python", "Docker", "Minikube", "TypeScript", "Vite", "Flask", "Supabase", "Cloudflare Pages"],
     live: "https://roles-fortal-frontend.cauaosp20.workers.dev/",
     repo: "https://github.com/cauaosp/roles_fortal_infra",
   },
@@ -108,7 +108,7 @@ const PROJECTS = [
     summary:
       "Um site para conferir rapidamente o clima, temperatura, localização e censo populacional de qualquer muncípio do Brasil.",
     image: "/images/mandachuva.png",
-    tech: ["Express.js", "Vite", "Vitest", "TypeScript"],
+    tech: ["Express.js", "Vite", "Vitest", "TypeScript", "Render"],
     live: "https://mandachuva.onrender.com/",
     repo: "https://github.com/cauaosp/mandachuva",
   },
@@ -117,7 +117,7 @@ const PROJECTS = [
     summary:
       "Vitrine para apresentação profissional.",
     image: "/images/webportfolio.png",
-    tech: ["Next.js", "TypeScript", "TailwindCSS", "Bun"],
+    tech: ["Next.js", "TypeScript", "TailwindCSS", "Bun", "Vercel"],
     live: "https://webportifolios.vercel.app/",
     repo: "https://github.com/cauaosp/webportifolios",
   },

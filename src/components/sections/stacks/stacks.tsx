@@ -73,7 +73,7 @@ export function Stacks() {
               </span>
             </div>
             <p className="text-sm text-muted-foreground">
-              Linguagens de programação já experimentados.
+              Linguagens de programação já experimentadas.
             </p>
             <div className="flex flex-wrap gap-2">
               {LANGUAGES.map((lang) => (
@@ -92,7 +92,6 @@ export function Stacks() {
         </div>
       </div>
     </section>
-
   );
 }
 
@@ -110,7 +109,10 @@ const KNOWLEDGE = [
   "Levantamento de requisitos",
   "Conventional Commits",
   "Linux",
-  "API REST"
+  "API REST",
+  "FullStack Developer",
+  "CI/CD",
+  "DevOps"
 ];
 
 const EXPERIENCE = [
@@ -134,16 +136,19 @@ const EXPERIENCE = [
   "Gitlab",
   "Express",
   "Claude",
+  "Cloudflare Pages",
   "ChatGPT",
   "Minikube",
   "React",
+  "Github Actions",
+  "SQLAlchemy"
 ];
 
 const LANGUAGES = [
   { name: "Python", level: "Trabalho" },
   { name: "TypeScript", level: "Trabalho" },
   { name: "JavaScript", level: "Trabalho" },
-  { name: "C#", level: "Trabalhei" },
+  { name: "C#", level: "Trabalho" },
   { name: "Java", level: "Faculdade" },
   { name: "C", level: "Faculdade" },
   { name: "C++", level: "Faculdade" },
